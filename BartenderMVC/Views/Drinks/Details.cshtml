@@ -1,0 +1,42 @@
+﻿@model BartenderMVC.Models.Drink
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Drink</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.drinkName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.drinkName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.drinkDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.drinkDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.drinkPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.drinkPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.drinkID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
